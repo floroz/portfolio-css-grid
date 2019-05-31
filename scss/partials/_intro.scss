@@ -1,0 +1,32 @@
+.intro {
+	display: flex;
+	color: rgba($white, 0.7);
+
+	h2 {
+		color: $white;
+	}
+
+	@supports (display: grid) {
+		display: grid;
+		grid-template-columns: minmax(4em, 1fr) minmax(auto, 30em) minmax(4em, 1fr);
+	}
+}
+
+.intro-middle {
+	background: $dark-blue;
+	padding: 2.5em 4.5vw;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.intro-left,
+.intro-right {
+	img {
+		min-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+}
