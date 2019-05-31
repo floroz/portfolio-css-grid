@@ -4,6 +4,15 @@
 
 	h2 {
 		color: $white;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 20%;
+			height: 1px;
+			background-color: rgba($white, 0.5);
+			margin: 1em auto 0;
+		}
 	}
 
 	@supports (display: grid) {
