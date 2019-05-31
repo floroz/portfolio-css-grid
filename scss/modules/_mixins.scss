@@ -25,3 +25,9 @@
 		clear: both;
 	}
 }
+
+@mixin mq($width: 50em) {
+	@media only screen and (min-width: $width) {
+		@content;
+	}
+}
