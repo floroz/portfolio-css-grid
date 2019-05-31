@@ -1,5 +1,6 @@
 .about {
 	@include container;
+	margin-bottom: 5em;
 
 	@media (min-width: 40em) {
 		@include clearfix;
