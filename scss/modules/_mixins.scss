@@ -1,0 +1,27 @@
+@mixin container($width: 90%, $max-width: 50em) {
+	width: $width;
+	margin: 0 auto;
+	max-width: $max-width;
+}
+
+@mixin sans-serif($fs, $ls: 0.15em, $color: $grey, $tt: uppercase, $lh: 1) {
+	font-size: $fs;
+	letter-spacing: $ls;
+	color: $color;
+	line-height: $lh;
+	text-transform: $tt;
+	font-family: $ff-ss;
+	font-weight: $fw-n;
+}
+
+@mixin clearfix() {
+	&::before,
+	&::after {
+		content: '';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
