@@ -1,0 +1,47 @@
+.menu-button {
+	position: absolute;
+	top: 3em;
+	left: 3em;
+	background: transparent;
+	border: 0;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 10%;
+	z-index: 10;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		justify-content: space-around;
+		align-items: stretch;
+		background: $accent;
+
+		li {
+			border-bottom: 1px solid $white;
+			text-align: center;
+			transition: all 0.2s ease-in-out;
+		}
+
+		li:hover {
+			background: $dark-blue;
+		}
+
+		li a {
+			display: inline-block;
+			text-decoration: none;
+			@include sans-serif($fs: 4rem, $color: $white);
+			line-height: 0;
+			padding: calc(100vh / 8) 3em;
+			width: 100%;
+		}
+	}
+}
