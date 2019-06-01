@@ -10,9 +10,20 @@ portfolioContainer.addEventListener('click', e => {
 
 	if (!modal) return;
 
-	modal.style.display = 'block';
+	modal.classList.remove('modal-is-closed');
+	modal.classList.add('modal-is-open');
 
-	modal.addEventListener('click', () => {
-		modal.style.display = 'none';
+	const closeButton = modal.querySelector('.modal-close');
+
+	closeButton.addEventListener('click', () => {
+		modal.classList.remove('modal-is-open');
+		modal.classList.add('modal-is-closed');
+	});
+
+	document.addEventListener('keydown', e => {
+		if (e.keyCode === 27) {
+			modal.classList.remove('modal-is-open');
+			modal.classList.add('modal-is-closed');
+		} else return;
 	});
 });

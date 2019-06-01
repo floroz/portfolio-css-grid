@@ -90,3 +90,7 @@ nav a {
 		transform: translateX(-70%);
 	}
 }
+
+.container-all-open {
+	transition: all 0.25s ease-out;
+}

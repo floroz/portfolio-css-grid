@@ -115,7 +115,64 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 
-	display: none;
+	display: block;
+	transform: translateY(-1000%);
+}
+
+.modal-is-open {
+	animation: modalOpen 0.7s ease-out forwards;
+}
+
+.modal-is-closed {
+	animation: modalClose 0.7s ease-out forwards;
+}
+
+@keyframes modalOpen {
+	0% {
+		transform: translateY(-1000%);
+	}
+
+	35% {
+		transform: translateY(-100%);
+	}
+
+	70% {
+		transform: translateY(5%);
+	}
+
+	80% {
+		transform: translateY(10%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes modalClose {
+	0% {
+		transform: translateY(0);
+	}
+
+	20% {
+		transform: translateY(5%);
+	}
+
+	30% {
+		transform: translateY(10%);
+	}
+
+	75% {
+		transform: translateY(-150%);
+	}
+
+	90% {
+		transform: translateY(-500%);
+	}
+
+	100% {
+		transform: translateY(-1000%);
+	}
 }
 
 .modal-close {
@@ -139,8 +196,28 @@
 	margin-bottom: 2em;
 }
 
-.portfolio-header:nth-of-type(1) {
+.header-1 {
 	background-image: url(../../img/portfolio-01.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.header-2 {
+	background-image: url(../../img/portfolio-02.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.header-3 {
+	background-image: url(../../img/portfolio-03.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.header-4 {
+	background-image: url(../../img/portfolio-04.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.header-5 {
+	background-image: url(../../img/portfolio-05.jpg);
 	background-size: cover;
 	background-position: center;
 }
